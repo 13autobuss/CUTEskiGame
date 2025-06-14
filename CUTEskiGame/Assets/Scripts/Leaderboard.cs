@@ -12,7 +12,7 @@ public class Leaderboard : MonoBehaviour
     private void Awake()
     {
         Besttimes.Clear();
-        for (int i  = 0; i < 5; i++)
+        for (int i  = 0; i < scoreText.Length; i++)
         {
            Besttimes.Add(PlayerPrefs.GetFloat("time: " + i, 9999999));
         }
@@ -27,9 +27,9 @@ public class Leaderboard : MonoBehaviour
 
     public void ShowScore()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < scoreText.Length; i++)
         {
-            scoreText[i].text = "Result "+ i +" : "+ Besttimes[i].ToString("F3");
+            scoreText[i].text = i + 1 +". Place :" + Besttimes[i].ToString("F3");
         }
     }
 
@@ -45,7 +45,7 @@ public class Leaderboard : MonoBehaviour
 
     private void SaveData()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < scoreText.Length; i++)
         {
             if (i<Besttimes.Count)
             {
