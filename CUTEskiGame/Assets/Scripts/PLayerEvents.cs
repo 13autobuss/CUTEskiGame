@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PLayerEvents : MonoBehaviour
+public class PlayerEvents : MonoBehaviour
 {
     public delegate void OnHit();
 

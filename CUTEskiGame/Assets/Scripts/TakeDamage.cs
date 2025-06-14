@@ -16,12 +16,12 @@ public class TakeDamage : MonoBehaviour
 
     private void OnEnable()
     {
-        PLayerEvents.playerHitEvent += TakeDmg;
+        PlayerEvents.playerHitEvent += TakeDmg;
     }
 
     private void OnDisable()
     {
-        PLayerEvents.playerHitEvent -= TakeDmg;
+        PlayerEvents.playerHitEvent -= TakeDmg;
     }
 
     public void TakeDmg()

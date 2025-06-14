@@ -9,7 +9,7 @@ public class Obstacle : MonoBehaviour
    {
       if (collision.gameObject.CompareTag("Player"))
       {
-         PLayerEvents.CallOnHitEvent();
+         PlayerEvents.CallOnHitEvent();
          PlayerDetection();
       }
    }

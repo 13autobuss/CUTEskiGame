@@ -23,7 +23,7 @@ public class RaceTimer : MonoBehaviour
         if (timeRunning)
         {
             time += Time.deltaTime;
-            timer.text = "Time: " + time.ToString("F2");
+            timer.text = time.ToString("F2");
         }
     }
 

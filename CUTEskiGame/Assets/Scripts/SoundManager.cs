@@ -15,11 +15,11 @@ public class SoundManager : MonoBehaviour
 
     private void OnEnable()
     {
-        PLayerEvents.playerHitEvent += PlayHitSound;
+        PlayerEvents.playerHitEvent += PlayHitSound;
     }
 
     private void OnDisable()
     {
-        PLayerEvents.playerHitEvent -= PlayHitSound;
+        PlayerEvents.playerHitEvent -= PlayHitSound;
     }
 }
