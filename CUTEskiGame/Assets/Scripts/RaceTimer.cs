@@ -9,6 +9,8 @@ public class RaceTimer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float penaltyTime;
     [SerializeField] private Leaderboard leaderboard;
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip wrong;
     
     private bool timeRunning = false;
     private float time;
@@ -29,6 +31,7 @@ public class RaceTimer : MonoBehaviour
 
     private void Penalty()
     {
+        source.PlayOneShot(wrong);
         time += penaltyTime;
     }
 
